@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+    background-color: rgb(179, 179, 179);
+}
+
+
+.open {
+    max-width: 1440px;
+    height: 1000px ;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+}
+
+.element1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: black ;
+    border-radius: 50px;
+    margin-bottom: 90px;
+    animation-name: CodeLock ;
+    animation-duration: 1.9s;
+    animation-timing-function: 0.2s;
+    animation-iteration-count:infinite;
+    z-index: 2;
+}
+
+.element2 {
+    position: absolute;
+    top: 660px;
+    width:120px;
+    height: 120px;
+    border: 20px solid black;
+    border-radius: 30%;
+    border-bottom: 35px solid rgb(179, 179, 179);
+    animation-name: CodeLock ;
+    animation-duration: 1.8s;
+    animation-timing-function: 2s;
+    animation-iteration-count:infinite; 
+    z-index: 1;
+    animation-name: OpenLock;
+    animation-delay: 0.1s;
+
+}
+
+@keyframes CodeLock {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+
+}
+
+@keyframes OpenLock {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(220deg)
+
+    }
+}
